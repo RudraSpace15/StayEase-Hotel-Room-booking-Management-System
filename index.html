@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>StayEase - Hotel Room Booking Management System </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header class="header" id="navigation-menu">
+    <div class="container">
+      <nav>
+        <a href="#home" class="logo" aria-label="StayEase home">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" role="img" focusable="false">
+              <path d="M5 22.5 24 7l19 15.5" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 20.5V41h28V20.5M19 41V28h10v13M15 25h3m12 0h3" fill="none" stroke="currentColor" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <span class="logo-name">Stay<span>Ease</span></span>
+        </a>
+
+        <ul class="nav-menu">
+          <li> <a href="#home" class="nav-link">Home</a> </li>
+          <li> <a href="#about" class="nav-link">About</a> </li>
+          <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
+          <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+          <li> <a href="#gallery" class="nav-link">Gallery</a> </li>
+          <li> <a href="#contact" class="nav-link">Contact</a> </li>
+        </ul>
+
+        <div class="hambuger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Welcome to StayEase</h1>
+          <p>Discover comfort, convenience, and unforgettable experiences with StayEase. Whether you're planning a relaxing vacation, a business trip, or a weekend getaway, we help you find the perfect hotel at the best value. Explore premium rooms, enjoy delicious dining options, and experience hassle-free bookings with secure payment facilities. Your comfort is our priority, and your perfect stay is just a few clicks away</p>
+          <button type="button" class="js-scroll" data-target="about">MORE INFO</button>
+        </div>
+      </div>
+   <div class="image">
+        <img src="images/home1.jpg" class="slide" alt="StayEase hotel resort">
+      </div>
+      <div class="image_item">
+        <img src="images/home1.jpg" alt="" class="slide active" onclick="img('images/home1.jpg')">
+        <img src="images/home2.jpg" alt="" class="slide" onclick="img('images/home2.jpg')">
+        <img src="images/home3.jpg" alt="" class="slide" onclick="img('images/home3.jpg')">
+        <img src="images/home4.jpg" alt="" class="slide" onclick="img('images/home4.jpg')">
+      </div>
+    </div>
+  </section>
+
+
+  <section class="book">
+    <div class="container flex">
+      <div class="input grid">
+        <div class="box">
+          <label>Check-in:</label>
+          <input id="checkIn" type="date" required>
+        </div>
+        <div class="box">
+          <label>Check-out:</label>
+          <input id="checkOut" type="date" required>
+        </div>
+        <div class="box">
+          <label>Adults:</label> <br>
+          <input id="adults" type="number" min="1" value="1" required>
+        </div>
+        <div class="box">
+          <label>Children:</label> <br>
+          <input id="children" type="number" min="0" value="0">
+        </div>
+      </div>
+      <div class="search">
+        <button type="button" id="searchRooms">SEARCH</button>
+      </div>
+    </div>
+  </section>
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="images/a1.jpg" alt="" class="image1">
+          <img src="images/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+          <h2>Welcome to STAYEASE Hotel Resort</h2>
+          <p>At StayEase, we believe every journey deserves a comfortable and memorable stay. Our goal is to provide guests with a perfect combination of luxury, convenience, and affordable hospitality. Whether you are travelling for business, enjoying a family vacation, or planning a relaxing getaway, we ensure a pleasant experience from the moment you arrive.</p>
+          <p>Our hotel offers beautifully designed rooms, modern amenities, delicious dining options, and friendly customer service. Your comfort and satisfaction are our top priorities. Choose StayEase and make every stay a wonderful experience.</p>
+          <button type="button" class="btn1 js-scroll" data-target="rooms">EXPLORE ROOMS</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Our Amenities</h2>
+        <p>Lorem ipsum dolor sit amet,StayEase is dedicated to providing comfortable accommodation and exceptional hospitality. We offer beautifully furnished rooms, modern facilities, and quality services to make every guest feel at home. Whether you are travelling for business or leisure, we strive to make your stay relaxing, enjoyable, and memorable.</p>
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming pool</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & yogo</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & massage</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Boat Tours</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-swimmer"></i>
+            <span>Surfing Lessons</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Conference room</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-water"></i>
+            <span>Diving & smorking</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Private Beach</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="room top" id="rooms">
+    <p id="bookingMessage" class="booking-message" aria-live="polite"></p>
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Rooms $ Suites</h2>
+        </div>
+        <div class="button">
+          <button type="button" class="btn1 js-scroll" data-target="rooms">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid">
+        <div class="box">
+          <div class="img">
+            <img src="images/r1.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Deluxe Single Room.</h3>
+            <p><span>₹</span>3,499 <span>/per night</span></p>
+            <button type="button" class="btn1 select-room" data-room="Deluxe Garden Room" data-price="3499">SELECT ROOM</button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="images/r2.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Premium Double Room</h3>
+            <p><span>₹</span>4,499 <span>/per night</span></p>
+            <button type="button" class="btn1 select-room" data-room="Premium King Room" data-price="4499">SELECT ROOM</button>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img">
+            <img src="images/r3.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>Grand Family Suite</h3>
+            <p><span>₹</span>5,999 <span>/per night</span></p>
+            <button type="button" class="btn1 select-room" data-room="Luxury Suite" data-price="5999">SELECT ROOM</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper wrapper2 top">
+    <div class="container">
+      <div class="text">
+        <div class="heading">
+          <h5>AT THE HEART OF COMMUNICATION</h5>
+          <h2>People Say</h2>
+        </div>
+
+        <div class="para">
+          <p>Enjoy a relaxing family getaway in our spacious and beautifully designed family rooms. Equipped with comfortable beds, modern amenities, and plenty of space, our rooms are perfect for families travelling together. Whether you are planning a short vacation or a long stay, StayEase ensures comfort, convenience, and memorable moments for everyone.</p>
+          <div class="box flex">
+            <div class="img">
+              <img src="images/c.jpg" alt="">
+            </div>
+            <div class="name">
+              <h5>KATE PALMER</h5>
+              <h5>IDAHO</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="restaurant top" id="restaurant">
+    <div class="container flex">
+      <div class="left">
+        <img src="images/re.jpg" alt="">
+      </div>
+      <div class="right">
+        <div class="text">
+          <h2>Our Restaurant</h2>
+          <p> At StayEase, our dedicated team is committed to delivering excellent hospitality and personalized services. We focus on providing a clean, safe, and welcoming environment where every guest can relax and enjoy a comfortable stay. Your happiness and satisfaction inspire us to make every visit special..</p>
+        </div>
+        <div class="accordionWrapper">
+          <div class="accordionItem open">
+            <h2 class="accordionIHeading">Indian Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>Enjoy the diverse and delicious flavours of India at our Indian Kitchen. From creamy paneer dishes and aromatic biryani to freshly baked naan, traditional curries, and regional specialities, every meal is prepared with authentic Indian spices and fresh ingredients. Experience the true taste of Indian hospitality with every bite.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Dubai Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>Discover the rich flavours of Dubai with a delightful selection of Middle Eastern specialities. Enjoy delicious Arabic kebabs, mandi rice, shawarma, hummus, and traditional Emirati dishes prepared with aromatic spices and fresh ingredients. Experience the authentic taste of Arabian cuisine in a warm and welcoming atmosphere..
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Italian Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>Discover the authentic taste of Italy at our Italian Kitchen. Enjoy a delicious selection of freshly prepared pizzas, creamy pasta, lasagna, risotto, and traditional Italian specialities. Made with fresh ingredients, rich flavours, and aromatic herbs, every dish brings you a delightful Italian dining experience.
+              </p>
+            </div>
+          </div>
+          <div class="accordionItem close">
+            <h2 class="accordionIHeading">Mexican Kitchen</h2>
+            <div class="accordionItemContent">
+              <p>Experience the vibrant flavours of Mexico at our Mexican Kitchen. Enjoy delicious tacos, burritos, quesadillas, nachos, and freshly prepared Mexican specialities made with authentic spices and fresh ingredients. Whether you love spicy flavours or mild dishes, our menu offers something delicious for everyone.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <section class="gallary mtop " id="gallery">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+          <h2>Photo Gallery of Our Hotel</h2>
+        </div>
+        <div class="button">
+          <button type="button" class="btn1 js-scroll" data-target="gallery">VIEW GALLERY</button>
+        </div>
+      </div>
+
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="images/g1.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g2.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g3.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g4.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g5.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g6.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g7.jpg" alt="">
+        </div>
+        <div class="item">
+          <img src="images/g8.jpg" alt="">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+
+  <footer id="contact">
+    <div class="container grid top">
+      <div class="box">
+        <img src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png" />
+        <p> At StayEase, we take pride in offering exceptional hospitality, comfortable accommodations, and quality services. Our friendly staff is always ready to assist you, ensuring a relaxing and enjoyable experience throughout your stay. We aim to make every visit memorable with comfort, care, and attention to detail..</p>
+
+        <p>Accepted payment methods</p>
+        <div class="payment grid">
+          <img src="https://img.icons8.com/color/48/000000/visa.png" />
+          <img src="https://img.icons8.com/color/48/000000/mastercard.png" />
+          <img src="https://img.icons8.com/color-glass/48/000000/paypal.png" />
+          <img src="https://img.icons8.com/fluency/48/000000/amex.png" />
+        </div>
+      </div>
+
+      <div class="box">
+        <h3>Recent News</h3>
+
+        <ul>
+          <li>Our Secret Island Boat Tour Is Just for You</li>
+          <li>Chill and Escape in Our Natural Shelters</li>
+          <li>September in STAYEASE Hotel</li>
+          <li>Live Music Concerts at STAYEASE</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>For Customers</h3>
+        <ul>
+          <li>About STAYEASE</li>
+          <li>Customer Care/Help</li>
+          <li>Corporate Accounts</li>
+          <li>Financial Information</li>
+          <li>Terms & Conditions</li>
+        </ul>
+      </div>
+
+      <div class="box">
+        <h3>Contact Us</h3>
+
+        <ul>
+          <li>Mall Road, Bathinda, Punjab, India – 151001</li>
+          <li><i class="far fa-envelope"></i>hotelStayease3@gmail.com </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-phone-alt"></i>123 456 7898 </li>
+          <li><i class="far fa-comments"></i>24/ 7 Customer Services </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <div class="checkout-modal" id="checkoutModal" aria-hidden="true">
+    <div class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+      <button type="button" class="modal-close" id="closeCheckout" aria-label="Close">&times;</button>
+      <h2 id="checkoutTitle">Complete your booking</h2>
+      <p id="checkoutSummary"></p>
+      <form id="paymentForm">
+        <label for="guestName">Full name</label><input id="guestName" required placeholder="Enter your name">
+        <label for="guestEmail">Email address</label><input id="guestEmail" type="email" required placeholder="you@example.com">
+        <label for="paymentMethod">Payment method</label>
+        <select id="paymentMethod" required><option value="">Choose payment method</option><option>UPI (demo)</option><option>Credit / Debit Card (demo)</option><option>Pay at hotel</option></select>
+        <button class="btn1" type="submit">CONFIRM BOOKING</button>
+      </form>
+      <p class="demo-note">Demo checkout only. No real money is charged and no real payment is processed.</p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
+      
+  
+
